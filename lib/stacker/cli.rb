@@ -205,7 +205,7 @@ YAML
     end
 
     def templates_path
-      File.join working_path, 'templates'
+      File.join working_path, 'output'
     end
 
     def working_path
