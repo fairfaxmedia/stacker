@@ -61,7 +61,8 @@ module Stacker
         if stack.exists?
           next unless full_diff stack
 
-          if yes? "Update remote template with these changes (y/n)?"
+          if true
+            Stacker.logger.warn "Updating remote template with these changes."
             time = Benchmark.realtime do
               stack.update
             end
@@ -70,7 +71,8 @@ module Stacker
             Stacker.logger.warn 'Update skipped'
           end
         else
-          if yes? "#{stack.name} does not exist. Create it (y/n)?"
+          if true
+            Stacker.logger.warn "#{stack.name} does not exist. Creating it."
             time = Benchmark.realtime do
               stack.create
             end
