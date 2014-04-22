@@ -8,7 +8,7 @@ module Stacker
     include Thor::Actions
 
     default_path = ENV['STACKER_PATH'] || '.'
-    default_region = ENV['STACKER_REGION'] || 'us-east-1'
+    default_region = ENV['STACKER_REGION'] || 'ap-southeast-2'
 
     method_option :path,   default: default_path,   banner: 'project path'
     method_option :region, default: default_region, banner: 'AWS region name'
